@@ -117,6 +117,10 @@ func callMount(bin string, daemonVar string, dir string, conf *mountConfig, f *o
 	cmd.Env = append(cmd.Env, "MOUNT_FUSEFS_CALL_BY_LIB=")
 	// OSXFUSE >=3.3.0
 	cmd.Env = append(cmd.Env, "MOUNT_OSXFUSE_CALL_BY_LIB=")
+	// macFUSE
+	cmd.Env = append(cmd.Env, "_FUSE_CALL_BY_LIB=")
+	cmd.Env = append(cmd.Env, "_FUSE_COMMFD=3")
+	cmd.Env = append(cmd.Env, "_FUSE_COMMVERS=2")
 
 	daemon := os.Args[0]
 	if daemonVar != "" {
@@ -177,6 +181,7 @@ func mount(dir string, conf *mountConfig, ready chan<- struct{}, errp *error) (*
 		locations = []OSXFUSEPaths{
 			OSXFUSELocationV3,
 			OSXFUSELocationV2,
+			MacFuseLocation,
 		}
 	}
 	for _, loc := range locations {
