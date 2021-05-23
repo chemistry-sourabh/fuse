@@ -17,8 +17,8 @@ import (
 	"syscall"
 	"time"
 
-	"bazil.org/fuse"
-	"bazil.org/fuse/fuseutil"
+	"github.com/chemistry-sourabh/fuse"
+	"github.com/chemistry-sourabh/fuse/fuseutil"
 )
 
 const (

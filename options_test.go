@@ -10,11 +10,11 @@ import (
 	"syscall"
 	"testing"
 
-	"bazil.org/fuse"
-	"bazil.org/fuse/fs"
-	"bazil.org/fuse/fs/fstestutil"
-	"bazil.org/fuse/fs/fstestutil/spawntest"
-	"bazil.org/fuse/fs/fstestutil/spawntest/httpjson"
+	"github.com/chemistry-sourabh/fuse"
+	"github.com/chemistry-sourabh/fuse/fs"
+	"github.com/chemistry-sourabh/fuse/fs/fstestutil"
+	"github.com/chemistry-sourabh/fuse/fs/fstestutil/spawntest"
+	"github.com/chemistry-sourabh/fuse/fs/fstestutil/spawntest/httpjson"
 )
 
 func init() {

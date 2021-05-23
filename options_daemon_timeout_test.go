@@ -12,9 +12,9 @@ import (
 	"testing"
 	"time"
 
-	"bazil.org/fuse"
-	"bazil.org/fuse/fs"
-	"bazil.org/fuse/fs/fstestutil"
+	"github.com/chemistry-sourabh/fuse"
+	"github.com/chemistry-sourabh/fuse/fs"
+	"github.com/chemistry-sourabh/fuse/fs/fstestutil"
 )
 
 type slowCreaterDir struct {
